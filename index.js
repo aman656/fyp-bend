@@ -7,6 +7,7 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 app.use("/v1/voters", routes.Voter);
+app.use("/v1/admin", routes.Admin);
 app.listen(9000, () => {
   mongoose
     .connect(
